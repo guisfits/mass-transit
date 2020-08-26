@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireOnWheels.Messaging", "F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireOnWheels.Registration.Service", "FireOnWheels.Registration.Service\FireOnWheels.Registration.Service.csproj", "{2E3DCCFC-BF01-4877-A9B3-22F52F12C9A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireOnWheels", "FireOnWheels\FireOnWheels.csproj", "{048358CC-ABB1-44E8-8668-D143F80ECD50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{2E3DCCFC-BF01-4877-A9B3-22F52F12C9A3}.Release|x64.Build.0 = Release|Any CPU
 		{2E3DCCFC-BF01-4877-A9B3-22F52F12C9A3}.Release|x86.ActiveCfg = Release|Any CPU
 		{2E3DCCFC-BF01-4877-A9B3-22F52F12C9A3}.Release|x86.Build.0 = Release|Any CPU
+		{048358CC-ABB1-44E8-8668-D143F80ECD50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{048358CC-ABB1-44E8-8668-D143F80ECD50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{048358CC-ABB1-44E8-8668-D143F80ECD50}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{048358CC-ABB1-44E8-8668-D143F80ECD50}.Debug|x64.Build.0 = Debug|Any CPU
+		{048358CC-ABB1-44E8-8668-D143F80ECD50}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{048358CC-ABB1-44E8-8668-D143F80ECD50}.Debug|x86.Build.0 = Debug|Any CPU
+		{048358CC-ABB1-44E8-8668-D143F80ECD50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{048358CC-ABB1-44E8-8668-D143F80ECD50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{048358CC-ABB1-44E8-8668-D143F80ECD50}.Release|x64.ActiveCfg = Release|Any CPU
+		{048358CC-ABB1-44E8-8668-D143F80ECD50}.Release|x64.Build.0 = Release|Any CPU
+		{048358CC-ABB1-44E8-8668-D143F80ECD50}.Release|x86.ActiveCfg = Release|Any CPU
+		{048358CC-ABB1-44E8-8668-D143F80ECD50}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
