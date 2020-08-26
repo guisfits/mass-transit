@@ -11,7 +11,7 @@ namespace FireOnWheels.Notification.Service
         {
             Console.Title = "Notification";
 
-            var bus = Bus.Factory.CreateUsingRabbitMq(config =>
+            var bus = BusConfigurator.ConfigureBus(config =>
             {
                 config.ReceiveEndpoint(RabbitMqConstants.NotificationServiceQueue, e =>
                 {

@@ -6,11 +6,12 @@ namespace FireOnWheels.Messaging
 {
     public static class BusConfigurator
     {
-        public static IBusControl ConfigureBus(Action<IRabbitMqHostConfigurator> hostConfigurator = null)
+        public static IBusControl ConfigureBus(Action<IRabbitMqBusFactoryConfigurator> actionConfigurator = null)
         {
             return Bus.Factory.CreateUsingRabbitMq(cfg =>
             {
-                cfg.Host(RabbitMqConstants.RabbitMqUri, hostConfigurator);
+                cfg.Host(RabbitMqConstants.RabbitMqUri);
+                actionConfigurator.Invoke(cfg);
             });
         }
     }
