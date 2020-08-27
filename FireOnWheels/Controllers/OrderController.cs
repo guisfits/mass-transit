@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using FireOnWheels.Messaging;
 using FireOnWheels.Registration.ViewModels;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FireOnWheels.Registration.Controllers
@@ -9,14 +10,20 @@ namespace FireOnWheels.Registration.Controllers
     [ApiController]
     public class OrderController : ControllerBase
     {
+        #region Constructor
+        private readonly IPublishEndpoint publisher;
+
+        public OrderController(IPublishEndpoint publisher)
+        {
+            this.publisher = publisher;
+        }
+
+        #endregion
+
         [HttpPost]
         public async Task<IActionResult> RegisterOrder(OrderInputModel model)
         {
-            var bus = BusConfigurator.ConfigureBus();
-
-            var sendToUri = new Uri(RabbitMqConstants.RabbitMqUri + RabbitMqConstants.RegisterOrderServiceQueue);
-            var endPoint = await bus.GetSendEndpoint(sendToUri);
-            await endPoint.Send<IRegisterOrderCommand>(model);
+            await publisher.Publish<IRegisterOrderCommand>(model);
 
             return Created("", model);
         }
